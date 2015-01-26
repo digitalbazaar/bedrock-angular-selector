@@ -12,7 +12,7 @@ define([
 
 'use strict';
 
-var module = angular.module('app.selector', []);
+var module = angular.module('bedrock.selector', []);
 
 module.directive(selectorDirective);
 

@@ -2,7 +2,10 @@
   "name": "bedrock-angular-selector",
   "main": "./selector.js",
   "moduleType": ["amd"],
-  "ignore": [],
+  "ignore": [
+    "bedrock",
+    "bedrock.json"
+  ],
   "dependencies": {
   }
 }

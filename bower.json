@@ -1,11 +1,13 @@
 {
   "name": "bedrock-angular-selector",
-  "main": "./selector.js",
+  "main": ["./selector.js", "./selector.less"],
   "moduleType": ["amd"],
   "ignore": [
     "bedrock",
     "bedrock.json"
   ],
   "dependencies": {
+    "bedrock-angular": "~0.0.1",
+    "bedrock-angular-modal": "~0.0.1"
   }
 }

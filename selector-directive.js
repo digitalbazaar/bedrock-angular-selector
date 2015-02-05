@@ -5,11 +5,9 @@
  *
  * @author Dave Longley
  */
-define(['module'], function(module) {
+define([], function() {
 
 'use strict';
-
-var modulePath = module.uri.substr(0, module.uri.lastIndexOf('/')) + '/';
 
 /* @ngInject */
 function factory() {
@@ -32,7 +30,7 @@ function factory() {
       selectedCallback: '&?brSelected'
     },
     transclude: true,
-    templateUrl: modulePath + 'selector.html',
+    templateUrl: requirejs.toUrl('bedrock-angular-selector/selector.html'),
     controller: Controller,
     controllerAs: 'model',
     bindToController: true

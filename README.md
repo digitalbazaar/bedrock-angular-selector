@@ -121,7 +121,7 @@ of images. Creating a custom selector is typically a three step process:
                 <br-input br-model="image"
                   br-options="{
                     icon: 'globe',
-                    name: 'badge.alignment.{{$index}}.url',
+                    name: 'url',
                     label: 'URL',
                     type: 'url',
                     placeholder: 'URL'

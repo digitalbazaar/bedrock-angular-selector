@@ -130,12 +130,10 @@ of images. Creating a custom selector is typically a three step process:
             </form>
           </div>
           <div class="modal-footer">
-            <span>
-              <button type="button" class="btn btn-primary"
-                ng-click="addImage(image)">Add</button>
-              <button type="button"
-                class="btn btn-default stackable-cancel">Cancel</button>
-            </span>
+            <button type="button" class="btn btn-primary"
+              ng-click="addImage(image)">Add</button>
+            <button type="button"
+              class="btn btn-default stackable-cancel">Cancel</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

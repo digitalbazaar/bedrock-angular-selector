@@ -17,7 +17,9 @@ of images. Creating a custom selector is typically a three step process:
 1. Create an "inner" selector directive that extends the `brSelector` base
   directive. This "inner" directive will require `brSelector` and provide
   most of the custom selection implementation. An "outer" directive will
-  supply the `brSelector`, hiding this implementation detail.
+  supply the `brSelector`, hiding this implementation detail. This approach
+  simplifies the code and cognitive load necessary to create a custom selector
+  in an application.
 
   ```js
   var module = angular.module('example', ['bedrock.selector']);

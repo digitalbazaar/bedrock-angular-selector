@@ -108,38 +108,30 @@ of images. Creating a custom selector is typically a three step process:
     stackable-closed="!err && brSelector.select(result)"
     br-lazy-compile="showAddImageModal">
     <!-- Modal contents with UI to add an image. -->
-    <div class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <a class="close stackable-cancel">&times;Close</span></a>
-            <h3 class="modal-title">New Image</h3>
-          </div>
-          <div class="modal-body">
-            <form class="well form-horizontal">
-              <fieldset>
-                <br-input br-model="image"
-                  br-options="{
-                    icon: 'globe',
-                    name: 'url',
-                    label: 'URL',
-                    type: 'url',
-                    placeholder: 'URL'
-                  }">
-                  Enter the URL for the image.
-                </br-input>
-              </fieldset>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary"
-              ng-click="addImage(image)">Add</button>
-            <button type="button"
-              class="btn btn-default stackable-cancel">Cancel</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    <br-modal br-title="New Image">
+      <div name="br-modal-body">
+        <form class="well form-horizontal">
+          <fieldset>
+            <br-input br-model="image"
+              br-options="{
+                icon: 'globe',
+                name: 'url',
+                label: 'URL',
+                type: 'url',
+                placeholder: 'URL'
+              }">
+              Enter the URL for the image.
+            </br-input>
+          </fieldset>
+        </form>
+      </div>
+      <div name="br-modal-footer">
+        <button type="button" class="btn btn-primary"
+          ng-click="addImage(image)">Add</button>
+        <button type="button"
+          class="btn btn-default stackable-cancel">Cancel</button>
+      </div>
+    </br-modal>
   </stackable-modal>
   ```
 

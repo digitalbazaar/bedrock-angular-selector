@@ -3,10 +3,7 @@
   "version": "1.0.1-dev",
   "main": ["./selector.js", "./selector.less"],
   "moduleType": ["amd"],
-  "ignore": [
-    "bedrock",
-    "bedrock.json"
-  ],
+  "ignore": [],
   "dependencies": {
     "bedrock-angular": "^1.0.0",
     "bedrock-angular-modal": "^1.0.0"

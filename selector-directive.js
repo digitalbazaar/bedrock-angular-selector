@@ -29,7 +29,10 @@ function factory() {
     scope: {
       selectedCallback: '&?brSelected'
     },
-    transclude: true,
+    transclude: {
+      'br-selector-selected': '?brSelectorSelected',
+      'br-selector-choices': '?brSelectorChoices'
+    },
     templateUrl: requirejs.toUrl('bedrock-angular-selector/selector.html'),
     controller: Controller,
     controllerAs: 'model',

@@ -10,15 +10,17 @@
     </button>
     <p ng-show="model.items.length == 0">None found.</p>
     <div ng-if="model.items.length >= 1" ng-multi-transclude-controller>
-      <div ng-multi-transclude="br-selector-selected"></div>
+      <div ng-transclude="br-selector-selected"
+        ng-multi-transclude="br-selector-selected"></div>
     </div>
   </div>
   <stackable-modal stackable="model.showChoices"
     br-lazy-compile="model.showChoices" br-lazy-id="br-selector-modal">
     <br-modal br-title="{{model.modalTitle || ('Select ' + model.itemType)}}">
-      <div name="br-modal-body">
+      <br-modal-body>
         <div ng-multi-transclude-controller>
-          <div ng-multi-transclude="br-selector-choices"></div>
+          <div ng-transclude="br-selector-choices"
+            ng-multi-transclude="br-selector-choices"></div>
         </div>
         <hr ng-show="model.items.length <= 1 || (!model.fixed && model.items.length > 1)"/>
         <div class="pull-right">
@@ -27,7 +29,7 @@
           </button>
         </div>
         <div style="clear:both"></div>
-      </div>
+      </br-modal-body>
     </br-modal>
   </stackable-modal>
 </div>

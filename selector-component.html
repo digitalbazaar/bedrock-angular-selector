@@ -1,0 +1,31 @@
+<div>
+  <div class="well">
+    <button ng-show="$ctrl.items.length <= 1 && $ctrl.onAddItem"
+      class="btn btn-success pull-right" ng-click="$ctrl.onAddItem()">
+      <span><i class="fa fa-plus"></i> Add {{$ctrl.itemType || 'Item'}}</span>
+    </button>
+    <button ng-show="!$ctrl.fixed && $ctrl.items.length > 1"
+      class="btn btn-success pull-right" ng-click="$ctrl.showChoices=true">
+      <span><i class="fa fa-list"></i> Change</span>
+    </button>
+    <p ng-show="$ctrl.items.length == 0">None found.</p>
+    <div ng-if="$ctrl.items.length >= 1">
+      <div ng-transclude="br-selector-selected"></div>
+    </div>
+  </div>
+  <stackable-modal stackable="$ctrl.showChoices"
+    br-lazy-compile="$ctrl.showChoices" br-lazy-id="br-selector-modal">
+    <br-modal br-title="{{$ctrl.choiceModalTitle || ('Select ' + ($ctrl.itemType || 'Item'))}}">
+      <br-modal-body>
+        <div ng-transclude="br-selector-choices"></div>
+        <hr ng-show="$ctrl.items.length <= 1 || (!$ctrl.fixed && $ctrl.items.length > 1)"/>
+        <div ng-if="$ctrl.onAddItem" class="pull-right">
+          <button class="btn btn-success" ng-click="$ctrl.onAddItem()">
+            <i class="fa fa-plus"></i> Add {{$ctrl.itemType || 'Item'}}
+          </button>
+        </div>
+        <div style="clear:both"></div>
+      </br-modal-body>
+    </br-modal>
+  </stackable-modal>
+</div>

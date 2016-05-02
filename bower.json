@@ -1,7 +1,7 @@
 {
   "name": "bedrock-angular-selector",
-  "version": "2.1.2-dev",
-  "main": ["./selector.js", "./selector.less"],
+  "version": "3.0.0-dev",
+  "main": ["./main.js", "./selector.less"],
   "moduleType": ["amd"],
   "ignore": [],
   "dependencies": {

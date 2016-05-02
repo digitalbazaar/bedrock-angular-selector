@@ -18,7 +18,8 @@ function register(module) {
       onSelect: '&brOnSelect',
       onAddItem: '&?brOnAddItem',
       fixed: '<?brFixed',
-      choiceModalTitle: '@?brChoiceModalTitle'
+      choiceModalTitle: '@?brChoiceModalTitle',
+      showChoices: '<?brShowChoices'
     },
     transclude: {
       'br-selector-selected': 'brSelectorSelected',

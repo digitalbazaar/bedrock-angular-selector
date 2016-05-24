@@ -19,7 +19,8 @@ function register(module) {
       onAddItem: '&?brOnAddItem',
       fixed: '<?brFixed',
       choiceModalTitle: '@?brChoiceModalTitle',
-      showChoices: '<?brShowChoices'
+      showChoices: '<?brShowChoices',
+      allowSelectNone: '<?brAllowSelectNone'
     },
     transclude: {
       'br-selector-selected': 'brSelectorSelected',

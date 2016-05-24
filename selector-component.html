@@ -1,14 +1,14 @@
 <div>
   <div class="well">
-    <button ng-show="$ctrl.items.length <= 1 && $ctrl.onAddItem"
+    <button ng-show="$ctrl.onAddItem && ($ctrl.items.length <= 1 && !$ctrl.allowSelectNone || $ctrl.items.length < 1 && $ctrl.allowSelectNone)"
       class="btn btn-success pull-right" ng-click="$ctrl.onAddItem()">
       <span><i class="fa fa-plus"></i> Add {{$ctrl.itemType || 'Item'}}</span>
     </button>
-    <button ng-show="!$ctrl.fixed && $ctrl.items.length > 1"
+    <button ng-show="(!$ctrl.fixed && $ctrl.items.length > 1 && !$ctrl.allowSelectNone) || (!$ctrl.fixed && !$ctrl.fixed && $ctrl.items.length > 0 && $ctrl.allowSelectNone)"
       class="btn btn-success pull-right" ng-click="$ctrl.showChoices=true">
       <span><i class="fa fa-list"></i> Change</span>
     </button>
-    <p ng-show="$ctrl.items.length == 0">None found.</p>
+    <p ng-show="$ctrl.items.length == 0 || ($ctrl.allowSelectNone && !$ctrl.selected)">None found.</p>
     <div ng-if="$ctrl.items.length >= 1">
       <div ng-transclude="br-selector-selected"></div>
     </div>
@@ -22,6 +22,11 @@
         <div ng-if="$ctrl.onAddItem" class="pull-right">
           <button class="btn btn-success" ng-click="$ctrl.onAddItem()">
             <i class="fa fa-plus"></i> Add {{$ctrl.itemType || 'Item'}}
+          </button>
+        </div>
+        <div ng-if="$ctrl.allowSelectNone && $ctrl.onSelect && $ctrl.selected" class="pull-left">
+          <button class="btn btn-warning" ng-click="$ctrl.onSelect({selected: null})">
+            Deselect {{$ctrl.itemType || 'Item'}}
           </button>
         </div>
         <div style="clear:both"></div>

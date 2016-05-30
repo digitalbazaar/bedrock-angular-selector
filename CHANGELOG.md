@@ -1,5 +1,10 @@
 # bedrock-angular-selector ChangeLog
 
+## 3.1.1 - 2016-05-30
+
+### Changed
+- Simplify conditionals in selector component.
+
 ## 3.1.0 - 2016-05-25
 
 ### Added

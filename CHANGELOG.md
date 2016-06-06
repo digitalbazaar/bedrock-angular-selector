@@ -1,5 +1,10 @@
 # bedrock-angular-selector ChangeLog
 
+## 3.1.2 - 2016-06-06
+
+### Fixed
+- Don't show add button when br-fixed is set.
+
 ## 3.1.1 - 2016-05-30
 
 ### Changed

@@ -1,36 +1,29 @@
 /*!
  * Base Selector Component.
  *
- * Copyright (c) 2012-2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2012-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
-define([], function() {
-
-'use strict';
-
-function register(module) {
-  module.component('brSelector', {
-    bindings: {
-      itemType: '<?brItemType',
-      items: '<brItems',
-      selected: '<brSelected',
-      onSelect: '&brOnSelect',
-      onAddItem: '&?brOnAddItem',
-      fixed: '<?brFixed',
-      choiceModalTitle: '@?brChoiceModalTitle',
-      showChoices: '<?brShowChoices',
-      allowSelectNone: '<?brAllowSelectNone'
-    },
-    transclude: {
-      'br-selector-selected': 'brSelectorSelected',
-      'br-selector-choices': 'brSelectorChoices'
-    },
-    controller: Ctrl,
-    templateUrl:
-      requirejs.toUrl('bedrock-angular-selector/selector-component.html')
-  });
-}
+export default {
+  bindings: {
+    itemType: '<?brItemType',
+    items: '<brItems',
+    selected: '<brSelected',
+    onSelect: '&brOnSelect',
+    onAddItem: '&?brOnAddItem',
+    fixed: '<?brFixed',
+    choiceModalTitle: '@?brChoiceModalTitle',
+    showChoices: '<?brShowChoices',
+    allowSelectNone: '<?brAllowSelectNone'
+  },
+  transclude: {
+    'br-selector-selected': 'brSelectorSelected',
+    'br-selector-choices': 'brSelectorChoices'
+  },
+  controller: Ctrl,
+  templateUrl: 'bedrock-angular-selector/selector-component.html'
+};
 
 /* @ngInject */
 function Ctrl() {
@@ -43,7 +36,3 @@ function Ctrl() {
     }
   };
 }
-
-return register;
-
-});

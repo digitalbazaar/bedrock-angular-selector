@@ -8,6 +8,6 @@
 import angular from 'angular';
 import SelectorComponent from './selector-component.js';
 
-var module = angular.module('bedrock.selector', []);
+var module = angular.module('bedrock.selector', ['bedrock.modal']);
 
 module.component('brSelector', SelectorComponent);

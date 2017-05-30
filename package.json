@@ -1,0 +1,23 @@
+{
+  "name": "bedrock-angular-selector",
+  "version": "3.1.2",
+  "description": "A bedrock AngularJS module that provides a base directive for building custom UIs for selecting a particular item from a set of items.",
+  "main": "index.js",
+  "less": "selector.less",
+  "dependencies": {
+    "angular": "~1.6.4",
+    "bedrock-angular-modal": "^4.0.0",
+    "bootstrap": "~3.3.4"
+  },
+  "bedrock": {
+    "browserDependencies": "all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/bedrock-angular-selector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/bedrock-angular-selector/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/bedrock-angular-selector#readme"
+}

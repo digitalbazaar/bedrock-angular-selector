@@ -1,5 +1,10 @@
 # bedrock-angular-selector ChangeLog
 
+## 4.0.1 - 2017-05-31
+
+### Fixed
+- Update deps.
+
 ## 4.0.0 - 2017-05-30
 
 ### Changed

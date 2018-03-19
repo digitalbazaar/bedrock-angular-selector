@@ -6,7 +6,7 @@
   "less": "selector.less",
   "dependencies": {
     "angular": "~1.6.4",
-    "bedrock-angular-modal": "digitalbazaar/bedrock-angular-modal#material",
+    "bedrock-angular-modal": "^6.0.0",
     "font-awesome": "^4.7.0"
   },
   "bedrock": {

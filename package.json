@@ -1,6 +1,6 @@
 {
   "name": "bedrock-angular-selector",
-  "version": "5.0.0",
+  "version": "5.0.1-0",
   "description": "A bedrock AngularJS module that provides a base directive for building custom UIs for selecting a particular item from a set of items.",
   "main": "index.js",
   "less": "selector.less",

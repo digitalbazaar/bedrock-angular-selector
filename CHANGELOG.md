@@ -1,5 +1,7 @@
 # bedrock-angular-selector ChangeLog
 
+## 5.0.0 - 2018-03-19
+
 ### Changed
 - **BREAKING**: Switch to material design.
 
